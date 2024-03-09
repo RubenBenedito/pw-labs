@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Nome do Seu Projeto</title>
+    <title>Register - Nome do Seu Projeto</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,21 +16,15 @@
             height: 100vh;
         }
 
-        #register-form {
+        #Register-form {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
+            width: 400px;
+            border-radius: 10px;
 
-        #register-heading {
-            font-weight: bold;
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
         }
 
         label {
@@ -45,33 +39,40 @@
             box-sizing: border-box;
         }
 
-        .button {
+        button {
             display: inline-block;
             padding: 10px 20px;
             text-decoration: none;
             color: #fff;
-            background-color: #4CAF50;
+            background-color: #2d98df;
             border-radius: 5px;
+            border: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div id="register-form">
-        <h2>Registro</h2>
-        <form action="processar_registro.php" method="post"> <!-- Substitua pelo script/processamento do lado do servidor -->
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" readonly>
+        <h2>Register</h2>
+        <form action="processar_register.php" method="post"> <!-- Substitua pelo script/processamento do lado do servidor -->
+            <label for="Name">Name:</label> 
+            <input type="text" id="Name" name="Name" readonly>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" readonly>
 
-            <label for="password">Senha:</label>
+            <label for="password">Password:</label>
             <input type="password" id="password" name="password" readonly>
 
-            <label for="confirm-password">Repetir Senha:</label>
+            <label for="confirm-password">Re-type password:</label>
             <input type="password" id="confirm-password" name="confirm-password" readonly>
 
-            <button type="submit" class="button" disabled>Registrar</button>
+            <button type="submit" class="button" disabled>Register</button>
         </form>
 
         <p><a href="recuperar_senha.html">Forgot password?</a></p>

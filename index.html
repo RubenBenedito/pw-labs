@@ -15,41 +15,56 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 100vh;  
         }
 
-        #logo {
-            max-width: 100px;
+        img {
+            max-width: 400px;
             height: auto;
+            border-radius: 10px;
         }
 
-        #project-name {
+        h1{
             font-size: 24px;
             margin: 20px 0;
             color: #000000;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
+        .button{
             margin: 10px;
+            height: 50px;
+            width: 450px;
+            border-radius: 20px;
+            background-color: #2d98df;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            transition: transform 0.3s ease;
+
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        
+        a{
+            margin: 20px;
             text-decoration: none;
-            color: #fff;
-            background-color: #5c5a5a;
-            border-radius: 5px;
+            color: #000000;
         }
     </style>
 </head>
 <body>
-    <img width = "400" src = "image/R.jpg" />
+    <img src = "image/R.jpg" />
     <h1 id="project-name">System Info</h1>
 
-    <a class="Register"  href = "register.html">Register</a>
-    <a class="login" href = "login.html">Login</a>
+    <a class="button" href = "login.html">Login</a>
+    <a class="button"  href = "register.html">Register</a>
     <a class="Forgot Password?" href = "forgotpassword.html">Forgot Password?</a>
 
 </body>
 </html>
-
-
 
