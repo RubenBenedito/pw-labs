@@ -27,16 +27,43 @@
 
         }
 
+
+
+
+
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
         label {
-            display: block;
+            display: inline-block;;
             margin: 10px 0;
         }
 
         input {
-            width: 100%;
+            width: 100px;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: 250px;
         }
 
         button {
@@ -48,12 +75,6 @@
             border-radius: 5px;
             border: none;
         }
-
-        a{
-            text-decoration: none;
-            color: #000;
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
@@ -61,21 +82,19 @@
         <h2>Register</h2>
         <form action="processar_register.php" method="post"> <!-- Substitua pelo script/processamento do lado do servidor -->
             <label for="Name">Name:</label> 
-            <input type="text" id="Name" name="Name" readonly>
+            <input type="text" id="Name" name="Name" readonly> <br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" readonly>
+            <input type="text" id="email" name="email" readonly> <br>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" readonly>
+            <input type="text" id="password" name="password" readonly><br>
 
             <label for="confirm-password">Re-type password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" readonly>
+            <input type="text" id="confirm-password" name="confirm-password" readonly><br>
 
             <button type="submit" class="button" disabled>Register</button>
         </form>
-
-        <p><a href="recuperar_senha.html">Forgot password?</a></p>
     </div>
 
     <div id="register-form">
