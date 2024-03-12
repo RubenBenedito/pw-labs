@@ -17,35 +17,31 @@
             height: 100vh;
         }
 
-        #login-form {
+        .form-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 400px;
-            border-radius: 10px;
+            position: relative;
         }
 
-        #back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-weight: bold;
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            width: 100px; 
+        }
+
+        .form-group input {
+            flex: 1;
+            width: 100%; 
             padding: 10px;
-            cursor: pointer;
-        }
-
-
-        label {
-            display: inline-block;
-            margin: 10px 0;
-        }
-
-        input {
-            width: 250px;
-            padding: 10px;
-            margin-bottom: 15px;
             box-sizing: border-box;
         }
 
@@ -59,35 +55,68 @@
             border: none;
         }
 
+        #agree {
+            margin: 20px;
+        }
+
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
         a{
             text-decoration: none;
             color: #000;
              text-decoration: underline;
+        }
 
+        footer {
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
-    <div id="login-form">
+    <div class="form-container">
         <h2>Login</h2>
-        <form action="processar_login.php" method="post"> <!-- Substitua pelo script/processamento do lado do servidor -->
+        <button id="back-button" onclick="goBack()">Back</button>
+        <form> 
+           <div class="form-group"></div>
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" readonly><br>
+        </div>
 
+        <div class="form-group">
             <label for="password">Password:</label>
             <input type="text" id="password" name="password" readonly><br>
+        </div>
 
             <button type="submit" class="button" disabled>Login</button>
         </form>
 
         <p><a href="forgotpassword.html">Forgot Password?</a></p>
     </div>
+ 
+    <footer>
+        <p>Copyright 2024 - All rights reserved by ...</p>
+    </footer>
 
-    <div id="login-form">
-        <button id="back-button" onclick="goBack()">Back</button>
-        <!-- Restante do código... -->
-    </div>
 
     <script>
         function goBack() {
