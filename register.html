@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Nome do Seu Projeto</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -24,12 +24,10 @@
             text-align: center;
             width: 400px;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
 
         }
-
-
-
-
 
         #back-button {
             position: absolute;
@@ -40,30 +38,16 @@
             cursor: pointer;
         }
 
-
-
-
-
-
-
-
-
-
-
         label {
             display: inline-block;;
             margin: 10px 0;
         }
 
         input {
-            width: 100px;
+            width: 250px;
             padding: 10px;
             margin-bottom: 20px;
             box-sizing: border-box;
-        }
-
-        input[type="text"] {
-            width: 250px;
         }
 
         button {
@@ -93,8 +77,10 @@
             <label for="confirm-password">Re-type password:</label>
             <input type="text" id="confirm-password" name="confirm-password" readonly><br>
 
-            <button type="submit" class="button" disabled>Register</button>
-        </form>
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I agree to the Terms of Use and Privacy Policy</label>
+
+            <button type="submit" class="button" disabled>Register</button> 
     </div>
 
     <div id="register-form">
