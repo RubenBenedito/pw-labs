@@ -1,17 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/comum.css">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="image/R.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Lab2</title>
 </head>
-<body>
-    <div>Hello Rúben</div>
+<body class="custom-bg m-5">
+    <nav class="navbar bg-body-tertiary mt-4">
+        <div class="container-fluid justify-content-end">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#gerirperfil">Gerir Perfil</button>
+            <button type="button" class="btn btn-danger ml-2" >Terminar sessão</button>
+        </div>
+    </nav>
 
-    <footer>
-        <p>Copyright 2024 - All rights reserved by ...</p>
-    </footer>
+    <!-- Profile Picture and Greeting -->
+    <div class="ml-5 mt-3">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="image/R.jpg" class="rounded border-0 w-75" alt="Image  of the user">
+            </div>
+            <div class="col-sm-10 align-self-center">
+                <h3>Olá, Rúben 👋</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tasks -->
+    <div class="mt-5">
+        <div class="row">
+            <div class="col d-flex justify-content-between align-items-center mb-3">
+                <h3>As minhas tarefas</h3>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#novatarefa">Nova Tarefa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table class="table table-warning table-hover mt-3">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-center">Tarefa</th>
+                <th class="text-center">Data</th>
+                <th class="text-center">Estado</th>
+                <th class="text-center">Funções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">Fazer o Lab 1 de PW</td>
+                <td class="text-center">14-03-2024</td>
+                <td class="text-center"><input type="checkbox"></td>
+                <td class="text-center"><button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#editar">Editar</button></td>
+            </tr>
+            <tr>
+                <td class="text-center">Fazer o Lab 2 de PW</td>
+                <td class="text-center">4-04-2024</td>
+                <td class="text-center"><input type="checkbox"></td>
+                <td class="text-center"><button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#editar">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal" id="gerirperfil" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Gerir Perfil</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="image/R.jpg" class="rounded border-0 w-50" alt="Profile Picture">
+                <div class="form-group mt-5">
+                    <input type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="novatarefa" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Nova Tarefa</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="image/R.jpg" class="rounded border-0 w-50" alt="Profile Picture">
+                <div class="form-group mt-5">
+                    <div class="form-floating">
+                        <label for="floatingTextarea">Description</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                      </div>
+    
+                <h4 class="m-3">Data</h4>
+                <input class="mb-2 ml-3 mr-3" type="date" class="form-control" id="dataTarefa">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Apagar</button>
+                <button type="button" class="btn btn-success">Gravar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="editar" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <img src="image/R.jpg" class="rounded border-0 w-50" alt="Profile Picture">
+            <div class="form-group mt-5">
+                <div class="form-floating">
+                    <label for="floatingTextarea">Description</label>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  </div>
+            </div>
+            <h4 class="m-3">Data</h4>
+            <input class="mb-2 ml-3 mr-3" type="date" class="form-control" id="dataTarefa">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Apagar</button>
+            <button type="button" class="btn btn-success">Gravar</button>
+        </div>
+    </div>
+</div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
